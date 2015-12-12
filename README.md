@@ -16,4 +16,6 @@ The implementations have been bundled into two files. Each file contains an iden
 * ```OpenMP:``` Number of OpenMP threads
 * ```CUDA:``` Size of block threads
 * Performance: CPU clock frequency
- 
+
+##Known Errors
+The CUDA implementation is fully functional, but does not produce an expected increase in performance over the serial implementation. This is due primarily to the ```closestNodeCUDA``` function, which at the moment is operating on only one thread. Future implementations will ideally parallelize this step.
